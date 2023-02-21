@@ -1,6 +1,7 @@
 {
     "name": "unocss-preset-tailwind",
-    "version": "0.0.2",
+    "version": "0.0.3",
+    "type": "module",
     "description": "Preset para unocss",
     "main": "src/index.ts",
     "peerDependencies": {
