@@ -24,3 +24,8 @@ export interface ThemesConfig {
         [variableName: string]: string
     }
 }
+
+export interface UnoCssTheme {
+    breakpoints: BreakpointsConfig,
+    themes: ThemesConfig
+}

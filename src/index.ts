@@ -12,10 +12,10 @@ export const presetTailwind = (options:presetWindiCssOptions):Preset<any> => {
         name: '@maycon-jesus/unocss-preset',
         theme: {
             breakpoints: options.breakpoints,
-            themes: options.breakpoints
+            themes: options.themes
         },
-        rules: {
+        rules: [
             ...themeRules
-        }
+        ]
     }
 }

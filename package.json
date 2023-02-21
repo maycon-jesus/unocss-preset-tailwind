@@ -1,15 +1,24 @@
 {
     "name": "unocss-preset-tailwind",
-    "version": "0.0.3",
-    "type": "module",
-    "description": "Preset para unocss",
-    "main": "src/index.ts",
+    "version": "0.1.0",
+    "description": "Preset para unocss baseado no TailwindCSS",
+    "main": "dist/index",
+    "types": "dist/index.d.ts",
     "peerDependencies": {
         "@unocss/core": "latest"
+    },
+    "scripts": {
+        "build": "tsc"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/maycon-jesus/unocss-preset-windicss.git"
+    },
+    "exports": {
+        ".": {
+            "default": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
     },
     "keywords": [],
     "author": "maycon-jesus",
@@ -17,5 +26,8 @@
     "bugs": {
         "url": "https://github.com/maycon-jesus/unocss-preset/issues"
     },
-    "homepage": "https://github.com/maycon-jesus/unocss-preset#readme"
+    "homepage": "https://github.com/maycon-jesus/unocss-preset#readme",
+    "devDependencies": {
+        "typescript": "^4.9.5"
+    }
 }
