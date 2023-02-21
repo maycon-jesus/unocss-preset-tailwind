@@ -1,4 +1,5 @@
 import type {Preset} from "@unocss/core"
+import breakpoints from "./rules/layout/breakpoints"
 import { themeRules } from "./rules/layout/theme"
 import { BreakpointsConfig, ThemesConfig } from "./types/types"
 
@@ -16,6 +17,9 @@ export const presetTailwind = (options:presetWindiCssOptions):Preset<any> => {
         },
         rules: [
             ...themeRules
+        ],
+        variants: [
+            ...breakpoints
         ]
     }
 }

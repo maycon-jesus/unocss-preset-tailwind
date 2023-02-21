@@ -1,24 +1,14 @@
-export interface BreakpointsConfig {
-    xs: {
-        max: number
-    },
-    sm: {
-        min: number,
-        max: number
-    },
-    md: {
-        min: number,
-        max: number
-    },
-    lg: {
-        min: number,
-        max: number
-    },
-    xl: {
-        min: number
+// Breakpoints
+export type BreakpointsNames = 'xs'|'sm'|'md'|'lg'|'xl'
+
+export type BreakpointsConfig = {
+    [name in BreakpointsNames]: {
+        min?: number,
+        max?: number
     }
 }
 
+// Theme
 export interface ThemesConfig {
     [themeName: string]: {
         [variableName: string]: string
