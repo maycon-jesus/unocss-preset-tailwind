@@ -18,6 +18,10 @@
         ".": {
             "default": "./dist/index.js",
             "types": "./dist/index.d.ts"
+        },
+        "./colors": {
+            "default": "./dist/utils/colors.js",
+            "types": "./dist/utils/colors.d.ts"
         }
     },
     "keywords": [],
