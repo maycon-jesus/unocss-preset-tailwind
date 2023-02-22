@@ -11,7 +11,9 @@ export type BreakpointsConfig = {
 // Theme
 export interface ThemesConfig {
     [themeName: string]: {
-        [variableName: string]: string
+        [variableName: string]: string | {
+            [colorGradient: string]: string
+        }
     }
 }
 
