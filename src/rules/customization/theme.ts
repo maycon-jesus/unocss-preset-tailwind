@@ -1,7 +1,7 @@
 import type { Rule } from "@unocss/core"
-import { UnoCssTheme } from "../../types/types"
+import { PresetConfig } from "../../types/types"
 
-export const themeRules: Rule<UnoCssTheme>[] = [
+export const themeRules: Rule<PresetConfig>[] = [
     [/^theme-(.+)$/, ([_, theme], config) => {
         const configTheme = config.theme.themes[theme]
         let variablesObj: {

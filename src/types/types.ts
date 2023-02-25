@@ -1,9 +1,9 @@
 // Screens
 export type ScreensConfig = {
     [name: string]: {
-        min?: string,
-        max?: string
-    } | string
+        min: number,
+        max?: number
+    } | number
 }
 
 // Theme
@@ -20,8 +20,24 @@ export interface SpacingConfig {
     [spacingName: string]: string
 }
 
-export interface UnoCssTheme {
+// Columns config
+export type ColumnsRulesConfig = {
+    [name: string]: string
+}
+
+// RuleConfigBase
+export type RuleConfigBase = {
+    [name: string]: string
+}
+
+export type PresetConfig = {
     themes: ThemesConfig,
     screens: ScreensConfig,
-    spacing: SpacingConfig
+    spacing: SpacingConfig,
+    columns: ColumnsRulesConfig,
+    aspectRatio: RuleConfigBase
+}
+
+export interface PresetPublicConfig extends PresetConfig{
+    extend?: PresetConfig
 }

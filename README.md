@@ -6,6 +6,13 @@ This is a [UnoCSS](https://github.com/unocss/unocss) preset based on [tailwindcs
 
 ## Progress status
 
+### Core concepts
+| Feature | Status | DOCS |
+| --- | --- | --- |
+| Hover, Focus, and Other States | ❌ | ❌ |
+| Responsive Design | ✅ | ❌ |
+| Multiples Themes | ✅ | ❌ |
+
 ### Configuration
 | Feature | Status | DOCS |
 | --- | --- | --- |
@@ -17,9 +24,9 @@ This is a [UnoCSS](https://github.com/unocss/unocss) preset based on [tailwindcs
 ### Layout (coming soon)
 | Feature | Status | DOCS |
 | --- | --- | --- |
-| Aspect Ratio | 🚧 | ❌ |
-| Container | 🚧 | ❌ |
-| Columns | 🚧 | ❌ |
+| Aspect Ratio | ✅ | ❌ |
+| Container | ✅ | ❌ |
+| Columns | ✅ | ❌ |
 | Break After | ❌ | ❌ |
 | Break Before | ❌ | ❌ |
 | Break Inside | ❌ | ❌ |
