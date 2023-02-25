@@ -1,16 +1,25 @@
 import type {Preset} from "@unocss/core"
-import breakpoints from "./rules/layout/breakpoints"
+import { screensVariants } from "./rules/layout/screens"
 import { themeRules } from "./rules/layout/theme"
-import { BreakpointsConfig, ThemesConfig } from "./types/types"
+import { ScreensConfig, SpacingConfig, ThemesConfig, UnoCssTheme } from "./types/types"
 import colors from "./utils/colors"
 
 interface presetWindiCssOptions {
     themes?: ThemesConfig,
-    breakpoints?: BreakpointsConfig
+    screens?: ScreensConfig,
+    spacing?: SpacingConfig
 }
 
-export const presetTailwind = (options:presetWindiCssOptions):Preset<any> => {
+export const presetTailwind = (options:presetWindiCssOptions):Preset<UnoCssTheme> => {
     if(!options.themes) options.themes = {}
+    if(!options.spacing) options.spacing = {}
+    if(!options.screens) options.screens = {
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+    }
 
     Object.keys(options.themes).forEach(themeName => {
         const nTheme = {}
@@ -21,14 +30,15 @@ export const presetTailwind = (options:presetWindiCssOptions):Preset<any> => {
     return {
         name: '@maycon-jesus/unocss-preset',
         theme: {
-            breakpoints: options.breakpoints,
-            themes: options.themes
+            screens: options.screens,
+            themes: options.themes,
+            spacing: options.spacing
         },
         rules: [
             ...themeRules
         ],
         variants: [
-            ...breakpoints
+            screensVariants()
         ]
     }
 }

@@ -7,14 +7,37 @@ This is a [UnoCSS](https://github.com/unocss/unocss) preset based on [tailwindcs
 ## Progress status
 
 ### Configuration
-| Feature | Status |
-| --- | --- |
-| Themes | 🚧 |
-| Screens | 🚧 |
-| Colors | ✅ |
-| Spacing | ❌ |
+| Feature | Status | DOCS |
+| --- | --- | --- |
+| Themes | ✅ | ❌ |
+| Screens | ✅ | ❌ |
+| Colors | ✅ | ❌ |
+| Spacing | ✅ | ❌ |
 
 ### Layout (coming soon)
+| Feature | Status | DOCS |
+| --- | --- | --- |
+| Aspect Ratio | 🚧 | ❌ |
+| Container | 🚧 | ❌ |
+| Columns | 🚧 | ❌ |
+| Break After | ❌ | ❌ |
+| Break Before | ❌ | ❌ |
+| Break Inside | ❌ | ❌ |
+| Box Decoration Break | ❌ | ❌ |
+| Box Sizing | ❌ | ❌ |
+| Display | ❌ | ❌ |
+| Floats | ❌ | ❌ |
+| Clear | ❌ | ❌ |
+| Isolation | ❌ | ❌ |
+| Object Fit | ❌ | ❌ |
+| Object Position | ❌ | ❌ |
+| Overflow | ❌ | ❌ |
+| Overscroll Behavior | ❌ | ❌ |
+| Position | ❌ | ❌ |
+| Top / Right / Bottom / Left | ❌ | ❌ |
+| Visibility | ❌ | ❌ |
+| Z-Index | ❌ | ❌ |
+
 ### Flexbox & Grid (coming soon)
 ### Spacing (coming soon)
 ### Sizing (coming soon)

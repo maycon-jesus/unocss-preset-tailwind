@@ -1,11 +1,9 @@
-// Breakpoints
-export type BreakpointsNames = 'xs'|'sm'|'md'|'lg'|'xl'
-
-export type BreakpointsConfig = {
-    [name in BreakpointsNames]: {
-        min?: number,
-        max?: number
-    }
+// Screens
+export type ScreensConfig = {
+    [name: string]: {
+        min?: string,
+        max?: string
+    } | string
 }
 
 // Theme
@@ -17,7 +15,13 @@ export interface ThemesConfig {
     }
 }
 
+// Spacing config
+export interface SpacingConfig {
+    [spacingName: string]: string
+}
+
 export interface UnoCssTheme {
-    breakpoints: BreakpointsConfig,
-    themes: ThemesConfig
+    themes: ThemesConfig,
+    screens: ScreensConfig,
+    spacing: SpacingConfig
 }
