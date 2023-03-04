@@ -41,3 +41,11 @@ export type PresetConfig = {
 export interface PresetPublicConfig extends PresetConfig{
     extend?: PresetConfig
 }
+
+// Variant
+export type PluginVariant = {
+    selector?: string[],
+    pseudoClass?: string[],
+    pseudoElement?: string[],
+    mediaQuery?: string[]
+} | undefined

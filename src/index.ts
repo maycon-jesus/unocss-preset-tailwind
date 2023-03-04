@@ -1,12 +1,12 @@
 import type { Preset } from "@unocss/core"
 import { ArbitraryPropertiesRules } from "./rules/core/arbitraryValues"
-import { screensVariants } from "./rules/customization/screens"
 import { themeRules } from "./rules/customization/theme"
 import { makeAspectRatioRules } from "./rules/layout/aspect-ratio"
 import { makeColumnsRules } from "./rules/layout/columns"
 import { containerShortcut } from "./rules/layout/container"
 import { PresetPublicConfig } from "./types/types"
 import { applyDefaults } from "./utils/applyDefaults"
+import makeVariants from "./variants"
 
 export const presetTailwind = (options: Partial<PresetPublicConfig>): Preset<any> => {
     const theme = applyDefaults(options)
@@ -23,14 +23,22 @@ export const presetTailwind = (options: Partial<PresetPublicConfig>): Preset<any
 
             // Layout
             ...makeAspectRatioRules(theme),
-            ...makeColumnsRules(theme)
+            ...makeColumnsRules(theme),
+            ['bg-red', {
+                'background-color': 'red'
+            }],
+            ['bg-blue', {
+                'background-color': 'blue'
+            }]
         ],
         variants: [
-            ...screensVariants()
+            makeVariants()
         ],
         shortcuts: {
             ...containerShortcut(theme)
         },
-
+        layers: {
+            'variant': 10
+        }
     }
 }

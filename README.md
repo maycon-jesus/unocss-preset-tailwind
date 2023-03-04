@@ -9,7 +9,7 @@ This is a [UnoCSS](https://github.com/unocss/unocss) preset based on [tailwindcs
 ### Core concepts
 | Feature | Status | DOCS |
 | --- | --- | --- |
-| Hover, Focus, and Other States | ❌ | ❌ |
+| Hover, Focus, and Other States | 🏗️ | ❌ |
 | Responsive Design | ✅ | ❌ |
 | Multiples Themes | ✅ | ❌ |
 
@@ -21,7 +21,7 @@ This is a [UnoCSS](https://github.com/unocss/unocss) preset based on [tailwindcs
 | Colors | ✅ | ❌ |
 | Spacing | ✅ | ❌ |
 
-### Layout (coming soon)
+### Layout
 | Feature | Status | DOCS |
 | --- | --- | --- |
 | Aspect Ratio | ✅ | ❌ |
