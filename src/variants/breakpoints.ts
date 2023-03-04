@@ -39,21 +39,21 @@ export function screensOnlyVariant(
             const queries: string[] = [];
 
             if (typeof screen === 'number') {
-                queries.push(`(min-width: ${screen}px)`);
+                queries.push(`min-width: ${screen}px`);
             } else {
-                queries.push(`(min-width: ${screen.min}px)`);
+                queries.push(`min-width: ${screen.min}px`);
             }
 
             const nextScreen = theme.screens[screenNames[index + 1]]
             if (nextScreen) {
                 if (typeof nextScreen === 'number') {
-                    queries.push(`(min-width: ${nextScreen - 1}px)`);
+                    queries.push(`max-width: ${nextScreen - 1}px`);
                 } else {
-                    queries.push(`(min-width: ${nextScreen.min - 1}px)`);
+                    queries.push(`max-width: ${nextScreen.min - 1}px`);
                 }
             }
 
-            p?.mediaQuery?.push(queries.join('and'))
+            p?.mediaQuery?.push(...queries)
 
             return p;
         },

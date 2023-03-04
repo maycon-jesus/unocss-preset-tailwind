@@ -48,7 +48,7 @@ export default function makeVariants(): Variant<PresetConfig>{
                     return s
                 }
             },
-            parent: `@media ${config.mediaQuery.map(media => `(${media})`).join('or')}`
+            parent: `@media ${config.mediaQuery.map(media => `(${media})`).join(' and ')}`
         }
     }
 }
