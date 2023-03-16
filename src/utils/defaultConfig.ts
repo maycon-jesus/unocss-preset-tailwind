@@ -43,4 +43,17 @@ export default {
         '6xl': '72rem',
         '7xl': '80rem',
     },
+
+    aria: {
+        checked: 'checked="true"',
+        disabled: 'disabled="true"',
+        expanded: 'expanded="true"',
+        hidden: 'hidden="true"',
+        pressed: 'pressed="true"',
+        readonly: 'readonly="true"',
+        required: 'required="true"',
+        selected: 'selected="true"',
+    },
+
+    data: {}
 } as PresetConfig

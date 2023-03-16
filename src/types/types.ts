@@ -35,7 +35,9 @@ export type PresetConfig = {
     screens: ScreensConfig,
     spacing: SpacingConfig,
     columns: ColumnsRulesConfig,
-    aspectRatio: RuleConfigBase
+    aspectRatio: RuleConfigBase,
+    aria: RuleConfigBase,
+    data: RuleConfigBase
 }
 
 export interface PresetPublicConfig extends PresetConfig{
@@ -45,7 +47,9 @@ export interface PresetPublicConfig extends PresetConfig{
 // Variant
 export type PluginVariant = {
     selector?: string[],
+    selectorComplements?: string[],
     pseudoClass?: string[],
     pseudoElement?: string[],
-    mediaQuery?: string[]
-} | undefined
+    mediaQuery?: string[],
+    sort?: number
+}

@@ -1,7 +1,7 @@
 import { PluginVariant } from "../types/types";
 
 export function hoverVariant(matcher: string):PluginVariant{
-    if(!matcher.includes('hover:'))return;
+    if(!matcher.includes('hover:'))return {};
 
     return {
         pseudoClass: ['hover']
@@ -9,7 +9,7 @@ export function hoverVariant(matcher: string):PluginVariant{
 }
 
 export function focusVariant(matcher: string):PluginVariant{
-    if(!matcher.includes('focus:'))return;
+    if(!matcher.includes('focus:'))return {};
 
     return {
         pseudoClass: ['focus']
@@ -17,7 +17,7 @@ export function focusVariant(matcher: string):PluginVariant{
 }
 
 export function activeVariant(matcher: string):PluginVariant{
-    if(!matcher.includes('active:'))return;
+    if(!matcher.includes('active:'))return {};
 
     return {
         pseudoClass: ['active']
@@ -25,7 +25,7 @@ export function activeVariant(matcher: string):PluginVariant{
 }
 
 export function firstVariant(matcher: string):PluginVariant{
-    if(!matcher.includes('first:'))return;
+    if(!matcher.includes('first:'))return {};
 
     return {
         pseudoClass: ['first-child']
@@ -33,7 +33,7 @@ export function firstVariant(matcher: string):PluginVariant{
 }
 
 export function lastVariant(matcher: string):PluginVariant{
-    if(!matcher.includes('last:'))return;
+    if(!matcher.includes('last:'))return {};
 
     return {
         pseudoClass: ['last-child']
@@ -41,7 +41,7 @@ export function lastVariant(matcher: string):PluginVariant{
 }
 
 export function oddVariant(matcher: string):PluginVariant{
-    if(!matcher.includes('odd:'))return;
+    if(!matcher.includes('odd:'))return {};
 
     return {
         pseudoClass: ['nth-child(2n+1)']
@@ -49,7 +49,7 @@ export function oddVariant(matcher: string):PluginVariant{
 }
 
 export function evenVariant(matcher: string):PluginVariant{
-    if(!matcher.includes('even:'))return;
+    if(!matcher.includes('even:'))return {};
 
     return {
         pseudoClass: ['nth-child(2n)']
@@ -58,7 +58,7 @@ export function evenVariant(matcher: string):PluginVariant{
 
 // FORM
 export function disabledVariant(matcher: string):PluginVariant{
-    if(!matcher.includes('disabled:'))return;
+    if(!matcher.includes('disabled:'))return {};
 
     return {
         pseudoClass: ['disabled']
@@ -66,7 +66,7 @@ export function disabledVariant(matcher: string):PluginVariant{
 }
 
 export function invalidVariant(matcher: string):PluginVariant{
-    if(!matcher.includes('invalid:'))return;
+    if(!matcher.includes('invalid:'))return {};
 
     return {
         pseudoClass: ['invalid']
@@ -74,7 +74,7 @@ export function invalidVariant(matcher: string):PluginVariant{
 }
 
 export function requiredVariant(matcher: string):PluginVariant{
-    if(!matcher.includes('required:'))return;
+    if(!matcher.includes('required:'))return {};
 
     return {
         pseudoClass: ['required']

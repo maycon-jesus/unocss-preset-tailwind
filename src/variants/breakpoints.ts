@@ -5,7 +5,7 @@ export function screensVariant(
     theme: PresetConfig
 ): PluginVariant {
     return Object.keys(theme.screens).reduce<PluginVariant>(
-        (p, screenName) => {
+        (p, screenName,index) => {
             if (!matcher.includes(`${screenName}:`)) return p;
 
             const screen = theme.screens[screenName];
@@ -17,7 +17,8 @@ export function screensVariant(
                 queries.push(`(min-width: ${screen.min}px)`);
             }
 
-            p?.mediaQuery?.push(queries.join('and'))
+            p.mediaQuery?.push(queries.join('and'))
+            p.sort=index+1
 
             return p;
         },
@@ -53,7 +54,8 @@ export function screensOnlyVariant(
                 }
             }
 
-            p?.mediaQuery?.push(...queries)
+            p.mediaQuery?.push(...queries)
+            p.sort = index+1
 
             return p;
         },

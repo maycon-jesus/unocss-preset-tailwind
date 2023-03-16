@@ -38,5 +38,17 @@ export function applyDefaults(obj: Partial<PresetPublicConfig>): Required<Preset
         ...obj.extend?.columns
     }
 
+    // ===/ VARIANT ARIA /===
+    nObject.aria = obj.aria || {
+        ...defaultConfig.aria,
+        ...obj.extend?.aria
+    }
+
+    // ===/ VARIANT DATA /===
+    nObject.data = obj.data || {
+        ...defaultConfig.data,
+        ...obj.extend?.data
+    }
+
     return nObject as Required<PresetConfig>
 }
