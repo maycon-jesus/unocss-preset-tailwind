@@ -17,7 +17,7 @@ jobs:
         uses: actions/cache/restore@v3,
         with:
           path: node_modules
-          key: ${{ GITHUB_REF }}-node_modules
+          key: ${{ github.ref }}-node_modules
 
       - uses: actions/setup-node@v3
         with:
