@@ -29,28 +29,8 @@ jobs:
         with:
           path: node_modules
           key: ${{ github.ref }}-node_modules
+
   unit-tests:
     runs-on: self-hosted
     steps:
-      - uses: actions/checkout@v3
-        name: Fazer checkout
-      
-      - name: Restaurar node_modules
-        id: 'restaurar-node-modules'
-        uses: actions/cache/restore@v3
-        with:
-          path: node_modules
-          key: ${{ github.ref }}-node_modules
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      - run: npm install
       - run: npm run test
-
-      - name: Salvar node_modules
-        id: 'salvar-node-modules'
-        uses: actions/cache/save@v3
-        with:
-          path: node_modules
-          key: ${{ github.ref }}-node_modules
