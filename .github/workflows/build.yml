@@ -14,7 +14,7 @@ jobs:
       
       - name: Restaurar node_modules
         id: 'restaurar-node-modules'
-        uses: actions/cache/restore@v3.3.1,
+        uses: actions/cache/restore@v3
         with:
           path: node_modules
           key: ${{ github.ref }}-node_modules
@@ -27,7 +27,7 @@ jobs:
 
       - name: Salvar node_modules
         id: 'salvar-node-modules'
-        uses: actions/cache/save@v3.3.1,
+        uses: actions/cache/save@v3
         with:
           path: node_modules
           key: ${{ github.ref }}-node_modules
