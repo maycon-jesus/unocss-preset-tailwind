@@ -1,12 +1,7 @@
 name: Build package
 run-name: Build package
 on:
-  push:
-    branches:
-      - "main"
-  release:
-    types:
-      - published
+  - push
 
 jobs:
   build:
