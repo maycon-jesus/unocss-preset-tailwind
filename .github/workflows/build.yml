@@ -1,0 +1,18 @@
+name: build
+run-name: Teste
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  teste-job:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+        name: Fazer checkout
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: npm install
+      - run: npm run build
