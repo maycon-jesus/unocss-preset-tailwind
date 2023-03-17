@@ -1,12 +1,11 @@
 name: Unit tests
-run-name: Unit tests
 on:
   push:
     branches: [main]
 
 jobs:
   build: 
-    uses: ./.github/workflows/parts/build.yml
+    uses: ./.github/workflows/_build.yml
 
   unit-tests:
-    uses: ./.github/workflows/parts/unit-tests.yml
+    uses: ./.github/workflows/_unit-tests.yml

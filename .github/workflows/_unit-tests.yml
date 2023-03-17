@@ -1,5 +1,4 @@
-name: Unit tests
-run-name: Unit tests
+name: "[PART] Unit tests"
 on:
   workflow_call:
 

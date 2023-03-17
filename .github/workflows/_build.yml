@@ -1,5 +1,4 @@
-name: Build package
-run-name: Build package
+name: "[PART] Build package"
 on:
   workflow_call:
 
