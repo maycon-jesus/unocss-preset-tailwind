@@ -18,9 +18,11 @@ jobs:
           path: node_modules
           key: ${{ github.ref }}-node_modules
 
-      - uses: actions/setup-node@v3
+      - name: 'Usar node.js v18'
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
+          
       - run: npm install
 
       - name: Salvar node_modules
@@ -29,10 +31,21 @@ jobs:
         with:
           path: node_modules
           key: ${{ github.ref }}-node_modules
+      
+      - name: Upload code
+        uses: actions/upload-artifact@v3
+        with:
+          name: code
+          path: "./"
 
   unit-tests:
     runs-on: ubuntu-latest
     needs:
       - install-dependencies
     steps:
+      - name: Download code
+        uses: actions/download-artifact@v3
+        with:
+          name: code
+          path: "./"
       - run: npm run test
