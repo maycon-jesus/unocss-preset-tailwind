@@ -45,7 +45,7 @@ jobs:
       - install-dependencies
     steps:
       - name: Get code
-        id: 'get code'
+        id: 'get-code'
         uses: actions/cache/restore@v3
         with:
           path: ./
