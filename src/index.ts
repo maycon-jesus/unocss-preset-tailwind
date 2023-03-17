@@ -8,7 +8,7 @@ import { PresetPublicConfig } from "./types/types"
 import { applyDefaults } from "./utils/applyDefaults"
 import makeVariants from "./variants"
 
-export const presetTailwind = (options: Partial<PresetPublicConfig>): Preset<any> => {
+export const presetTailwind = (options: PresetPublicConfig): Preset<any> => {
     const theme = applyDefaults(options)
 
     return {

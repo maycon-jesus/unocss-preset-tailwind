@@ -40,7 +40,7 @@ export type PresetConfig = {
     data: RuleConfigBase
 }
 
-export interface PresetPublicConfig extends PresetConfig{
+export interface PresetPublicConfig extends Partial<PresetConfig>{
     extend?: PresetConfig
 }
 
