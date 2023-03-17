@@ -44,10 +44,20 @@ jobs:
     needs:
       - install-dependencies
     steps:
-      - name: Get code
-        id: 'get-code'
+      - uses: actions/checkout@v3
+        name: Fazer checkout
+      
+      - name: Restaurar node_modules
+        id: 'restaurar-node-modules'
         uses: actions/cache/restore@v3
         with:
-          path: ./
-          key: ${{ github.ref }}-code
+          path: node_modules
+          key: ${{ github.ref }}-node_modules
+
       - run: npm run test
+
+      - name: 'Upload coverage'
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-coverage
+          path: ./coverage
