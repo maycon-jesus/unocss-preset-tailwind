@@ -1,7 +1,8 @@
 name: Build package
 run-name: Build package
 on:
-  - push
+  push:
+  workflow_call:
 
 jobs:
   build:
