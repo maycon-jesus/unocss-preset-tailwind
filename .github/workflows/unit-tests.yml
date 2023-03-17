@@ -6,7 +6,7 @@ on:
 
 jobs:
   install-dependencies:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         name: Fazer checkout
@@ -31,6 +31,6 @@ jobs:
           key: ${{ github.ref }}-node_modules
 
   unit-tests:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - run: npm run test
