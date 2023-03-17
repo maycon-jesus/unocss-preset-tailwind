@@ -32,20 +32,22 @@ jobs:
           path: node_modules
           key: ${{ github.ref }}-node_modules
       
-      - name: Upload code
-        uses: actions/upload-artifact@v3
+      - name: Save code
+        id: 'save-code'
+        uses: actions/cache/save@v3
         with:
-          name: code
-          path: "./"
+          path: ./
+          key: ${{ github.ref }}-code
 
   unit-tests:
     runs-on: ubuntu-latest
     needs:
       - install-dependencies
     steps:
-      - name: Download code
-        uses: actions/download-artifact@v3
+      - name: Get code
+        id: 'get code'
+        uses: actions/cache/restore@v3
         with:
-          name: code
-          path: "./"
+          path: ./
+          key: ${{ github.ref }}-code
       - run: npm run test
