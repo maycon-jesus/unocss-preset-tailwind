@@ -2,10 +2,6 @@ name: Build and test
 on:
   push:
     branches: [main]
-  release:
-    types:
-      - created
-      - edited
 
 jobs:
   build: 
