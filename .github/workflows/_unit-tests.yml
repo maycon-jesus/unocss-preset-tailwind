@@ -13,10 +13,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
+          cache: 'pnpm'
 
-      - run: npm install
-      - run: npm run test
+      - run: pnpm install
+      - run: pnpm run test
 
       - name: 'Upload coverage'
         uses: actions/upload-artifact@v3
