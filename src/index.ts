@@ -1,6 +1,6 @@
 import type { Preset } from "@unocss/core"
 import { ArbitraryPropertiesRules } from "./rules/core/arbitraryValues"
-import { themeRules } from "./rules/customization/theme"
+import { themeRules } from "./rules/core/theme"
 import { makeAspectRatioRules } from "./rules/layout/aspect-ratio"
 import { makeColumnsRules } from "./rules/layout/columns"
 import { containerShortcut } from "./rules/layout/container"
