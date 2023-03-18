@@ -3,18 +3,17 @@ import { PresetConfig } from "../../types/types";
 
 export function makeAspectRatioRules(config: PresetConfig): Rule[] {
     return [
-        ['aspect-auto', {
-            'aspect-ratio': 'auto'
-        }],
-        ['aspect-square', {
-            'aspect-ratio': '1 / 1'
-        }],
-        ['aspect-video', {
-            'aspect-ratio': '16 / 9'
-        }],
-        [/^aspect-(\d+)-(\d+)$/, ([_, aspect1, aspect2]) => {
+        ...Object.entries(config.aspectRatio).map<Rule>(([name,value]) => {
+            return [
+                name,
+                {
+                    'aspect-ratio': value
+                }
+            ]
+        }),
+        [/^aspect-\[(.+)\]$/, ([_, value]) => {
             return {
-                'aspect-ratio': `${aspect1} / ${aspect2}`
+                'aspect-ratio': value
             }
         }]
     ]

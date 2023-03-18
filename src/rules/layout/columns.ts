@@ -11,11 +11,6 @@ export function makeColumnsRules(config: PresetConfig): Rule[] {
                 }
             ]
         }),
-        [/^columns-(\d+)$/, ([_, cols]) => {
-            return {
-                columns: `${cols}`
-            }
-        }],
         [/^columns-\[(.+):(.+)\]$/, ([_, name, value]) => {
             return {
                 [name]: value

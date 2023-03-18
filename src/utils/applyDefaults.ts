@@ -1,7 +1,7 @@
 import { PresetPublicConfig, PresetConfig } from "../types/types";
 import defaultConfig from "./defaultConfig";
 
-export function applyDefaults(obj: Partial<PresetPublicConfig>): Required<PresetConfig> {
+export function applyDefaults(obj: PresetPublicConfig): Required<PresetConfig> {
     const nObject: Partial<PresetConfig> = {}
 
     // ===/ CUSTOMIZATIONS /===
